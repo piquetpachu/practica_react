@@ -1,5 +1,6 @@
 import { children } from "react"
 import { useState } from "react"
+import confetti from 'canvas-confetti'
 
 const Turn = {
   x:'X',
@@ -68,6 +69,7 @@ function App ()  {
     
     const elGanador = hayGanador(nuevoTablero)
     if (elGanador){
+      confetti()
       setGanador(elGanador)
     } else if(checkJuego(nuevoTablero)){
       setGanador(false)
